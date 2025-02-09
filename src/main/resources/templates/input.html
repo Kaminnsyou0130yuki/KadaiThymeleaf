@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>課題 ： 入力フォームの内容を画面に表示しよう</title>
+    </head>
+    <body>
+        <h1 th:text="#{content.header1}"></h1>
+        <h2 th:text="#{content.header2}"></h2>
+        <p th:text="#{content.message1}"></p>
+         <p th:if="${previous} != null" th:text="#{content.message4} + #{content.message2} + ${previous} + #{content.message5}"></p>
+        <form method="post" action="/output">
+            <input type="text" name="previous">
+            <button type="submit">送信</button>
+        </form>
+    </body>
+</html>
