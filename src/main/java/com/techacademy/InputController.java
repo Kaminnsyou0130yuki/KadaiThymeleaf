@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
-public class inputController {
+public class InputController {
 
     @GetMapping("/input/{previous}")
     public String getInputPrevious(@PathVariable String previous, Model model) {

@@ -11,7 +11,7 @@
          <p th:if="${previous} != null" th:text="#{content.message4} + #{content.message2} + ${previous} + #{content.message5}"></p>
         <form method="post" action="/output">
             <input type="text" name="previous">
-            <button type="submit">送信</button>
+            <button type="submit" th:text="#{content.message6}"></button>
         </form>
     </body>
 </html>
